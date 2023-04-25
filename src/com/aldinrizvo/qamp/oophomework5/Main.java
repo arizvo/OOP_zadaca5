@@ -45,8 +45,11 @@ public class Main {
             System.out.println();
 
             bankomat.reset("1", 1111);
+            bankomat.reset("2", 2222);
             System.out.println("State of current account after reset: ");
             System.out.println(bankomat.showAccountState("1", 1111));
+            System.out.println();
+            System.out.println(bankomat.showAccountState("2", 2222));
             System.out.println();
 
             final Account hanasNewAccount = new CurrentAccount(hana, "1", 1111, 100);

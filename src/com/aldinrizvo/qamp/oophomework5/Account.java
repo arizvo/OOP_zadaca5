@@ -33,10 +33,6 @@ public abstract class Account {
         return serialNumber;
     }
 
-    public int getPasscode() {
-        return passcode;
-    }
-
     public double getBalance() {
         return balance;
     }
@@ -53,5 +49,9 @@ public abstract class Account {
 
     public String showAccountState() {
         return "Owner: " + owner + "\nCurrent balance: " + balance;
+    }
+
+    public boolean verifyPasscode(final int passcode) {
+        return this.passcode == passcode;
     }
 }

@@ -48,7 +48,7 @@ public class ATM {
 
         for (final Account account : this.accountList) {
             if (Objects.equals(account.getSerialNumber(), serialNumber)) {
-                if (account.getPasscode() == passcode) {
+                if (account.verifyPasscode(passcode)) {
                     return account;
                 } else {
                     throw new IllegalStateException("Passcode is not correct.");
